@@ -1,0 +1,45 @@
+@keyframes slide {
+  100% {
+    top: -36px;
+  }
+}
+
+@keyframes typing {
+  40%,
+  60% {
+    left: calc(100% + 1px);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.typewriter-text li {
+  position: relative;
+  animation: slide 6s steps(2) infinite;
+  top: 0;
+}
+
+.typewriter-text li::after {
+  animation: typing 3s steps(10) infinite;
+  background-color: #fff;
+  border-left: 2px solid;
+  content: "";
+  height: 100%;
+  left: 0%;
+  position: absolute;
+  width: 100%;
+}
+
+.typewriter-text {
+  height: 18px;
+  margin-left: 4px;
+  overflow: hidden;
+}
+
+.typewriter-text-wrapper {
+  display: flex;
+}
